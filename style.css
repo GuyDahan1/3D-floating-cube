@@ -1,0 +1,71 @@
+body{
+    background-image: url("https://uhdwallpapers.org/uploads/converted/19/04/21/avengers-endgame-1280x800_898598-mm-90.jpg");
+    background-attachment: fixed;
+    background-size: 1500px;
+}
+
+.container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 250px;
+    margin-bottom: auto;
+    border-radius: 7px;
+    touch-action: none;
+}
+
+.cube{
+    transform-style: preserve-3d;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border-radius: 50%;
+    touch-action: none;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.cube img{
+    size: 50px;
+    position: absolute;
+    opacity: 0.95;
+    float: left;
+    width:  220px;
+    height: 220px;
+    resize: both;
+    overflow: auto;
+}
+
+.cube img:nth-child(1){
+    transform: rotateY(0deg) translateZ(110px);
+}
+
+.cube img:nth-child(2){
+    transform: rotateY(90deg) translateZ(110px);
+}
+
+.cube img:nth-child(3){
+    transform: rotateY(180deg) translateZ(110px);
+}
+
+.cube img:nth-child(4){
+    transform: rotateY(-90deg) translateZ(110px);
+}
+
+.cube img:nth-child(5){
+    transform: rotateX(90deg) translateZ(110px);
+}
+
+.cube img:nth-child(6){
+    transform: rotateX(-90deg) translateZ(110px);
+}
+
+@keyframes loop {
+    from{transform: rotateX(0deg) rotateY(0deg)}
+    to{transform: rotateX(360deg) rotateY(360deg)}
+}
+
+.cube{
+    animation: loop 10s linear infinite;
+}
+
